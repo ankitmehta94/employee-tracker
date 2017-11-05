@@ -9,18 +9,21 @@ import { Container, Grid, Label, Input, Button, Dropdown } from 'semantic-ui-rea
 const resultRenderer = ({ title }) => <Label content={title} />
 
 class NavBar extends  Component {
-	state = {totalUsers:[]}
+	constructor(){
+		super();
+		this.state = {totalUsers:[]}
+	}
 	componentWillMount () {
-		let totalUsers = this.props.users;
-		totalUsers.forEach(user=>{
+		let {users} = this.props;
+		users.forEach(user=>{
 			user.user_present = user.user_present.toString();
 		})
-		this.setState({totalUsers:totalUsers},()=>{
+		this.setState({totalUsers:users},()=>{
 			console.log(this.state);
 		});
 		console.log(this.props.users);
 		console.log(this.state);
-		console.log(totalUsers);
+		console.log(users);
 	}
 	handleChange = () => {
 		console.log(this);
