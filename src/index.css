@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.tableSize{
+	height: 200px;
+}
+.secondUser{
+	float: right!important;
+}
+.firstUser{
+	margin-left: 5%!important;
+}
+.inline-block{
+    display: inline-block;
+}
+.inline-grid{
+    display: inline-grid;
+}
