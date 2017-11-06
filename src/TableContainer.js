@@ -4,7 +4,7 @@ import './index.css';
 //console.log(s);
 import util from './util';
 
-import { Container, Grid, Checkbox } from 'semantic-ui-react'
+import { Container, Grid, Checkbox, Divider } from 'semantic-ui-react'
 
 import Table from './Table.js'
 
@@ -53,6 +53,18 @@ class TableContainer extends  React.Component {
 						</Grid.Column>
 						<Grid.Column>
 							<Table userList={this.state.tableUsers[2]} tableIndex={2}  admin={this.state.admin} />
+						</Grid.Column>
+					</Grid.Row>
+					<Divider/>
+					<Grid.Row columns={3}>
+						<Grid.Column>
+							<Table userList={this.state.tableUsers[3]} tableIndex={3}  admin={this.state.admin} />
+						</Grid.Column>
+						<Grid.Column>
+							<Table userList={this.state.tableUsers[4]} tableIndex={4}  admin={this.state.admin} />
+						</Grid.Column>
+						<Grid.Column>
+							<Table userList={this.state.tableUsers[5]} tableIndex={5}  admin={this.state.admin} />
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>

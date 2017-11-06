@@ -19,7 +19,7 @@ class Table extends  React.Component {
 				</Grid.Column>
 			</Grid.Row>
 			<Grid.Row columns={1}>
-				<Card raised description={'Table ' + (this.props.tableIndex+1)} className={'tableSize'}/>
+				<Card raised header={'Table ' + (this.props.tableIndex+1)} className={'tableSize'}/>
 			</Grid.Row>
 			<Grid.Row columns={2}>
 				<Grid.Column>

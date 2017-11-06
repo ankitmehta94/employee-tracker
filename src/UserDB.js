@@ -1,109 +1,217 @@
 export default [{
 	"key": 1,
-	"name": "Bobbie Senton",
-	"job": "Help Desk Operator",
-	"sex": "male",
-	"team": "A",
-	"user_present": true,
-	"position": 0,
-	color: "black"
+	"name": "Marty Rosberg",
+	"job": "Research Associate",
+	"sex": "female",
+	"user_present": false,
+	"position": 2,
+	"team": 'C',
+	"color": "black"
 }, {
 	"key": 2,
-	"name": "Micheline Ravenscroft",
-	"job": "Information Systems Manager",
-	"sex": "male",
-	"team": "B",
-	"user_present": false,
-	"position": 2,
-	color: "black"
+	"name": "Seth Suscens",
+	"job": "Software Engineer III",
+	"sex": "female",
+	"user_present": true,
+	"position": 0,
+	"team": 'A',
+	"color": "black"
 }, {
 	"key": 3,
-	"name": "Elia MacArthur",
-	"job": "Legal Assistant",
+	"name": "Tanny Ziems",
+	"job": "Statistician II",
 	"sex": "female",
-	"team": "C",
 	"user_present": true,
-	"position": 1,
-	color: "black"
+	"position": 3,
+	"team": 'D',
+	"color": "black"
 }, {
 	"key": 4,
-	"name": "Karmen Wellan",
-	"job": "Cost Accountant",
-	"sex": "male",
-	"team": "D",
-	"user_present": false,
-	"position": 3,
-	color: "black"
+	"name": "Morgan Skehan",
+	"job": "Help Desk Technician",
+	"sex": "female",
+	"user_present": true,
+	"position": 1,
+	"team": 'B',
+	"color": "black"
 }, {
 	"key": 5,
-	"name": "Rosella Rouch",
-	"job": "Computer Systems Analyst I",
+	"name": "Brinna Tudgay",
+	"job": "Senior Quality Engineer",
 	"sex": "female",
-	"team": "A",
-	"user_present": false,
-	"position": 2,
-	color: "black"
-}, {
-	"key": 6,
-	"name": "Maryanne Asee",
-	"job": "Human Resources Manager",
-	"sex": "male",
-	"team": "B",
-	"user_present": true,
-	"position": 0,
-	color: "black"
-}, {
-	"key": 7,
-	"name": "Cordell Marris",
-	"job": "Physical Therapy Assistant",
-	"sex": "male",
-	"team": "C",
-	"user_present": false,
-	"position": 1,
-	color: "black"
-}, {
-	"key": 8,
-	"name": "Theodosia Radcliffe",
-	"job": "Graphic Designer",
-	"sex": "female",
-	"team": "D",
 	"user_present": true,
 	"position": 3,
-	color: "black"
+	"team": 'D',
+	"color": "black"
+}, {
+	"key": 6,
+	"name": "La verne Hulatt",
+	"job": "Geological Engineer",
+	"sex": "female",
+	"user_present": false,
+	"position": 0,
+	"team": 'A',
+	"color": "black"
+}, {
+	"key": 7,
+	"name": "Kordula Winfrey",
+	"job": "Nurse Practicioner",
+	"sex": "female",
+	"user_present": false,
+	"position": 3,
+	"team": 'D',
+	"color": "black"
+}, {
+	"key": 8,
+	"name": "Bryana Skelding",
+	"job": "Occupational Therapist",
+	"sex": "male",
+	"user_present": false,
+	"position": 0,
+	"team": 'A',
+	"color": "black"
 }, {
 	"key": 9,
-	"name": "Suzanna Janicki",
-	"job": "Teacher",
-	"sex": "female",
-	"team": "A",
-	"user_present": true,
+	"name": "Reggie Snawdon",
+	"job": "Physical Therapy Assistant",
+	"sex": "male",
+	"user_present": false,
 	"position": 2,
-	color: "black"
+	"team": 'C',
+	"color": "black"
 }, {
 	"key": 10,
-	"name": "Kevon Dawks",
-	"job": "Data Coordiator",
+	"name": "Jase Darragh",
+	"job": "Internal Auditor",
 	"sex": "male",
-	"team": "B",
-	"user_present": false,
+	"user_present": true,
 	"position": 1,
-	color: "black"
+	"team": 'B',
+	"color": "black"
 }, {
 	"key": 11,
-	"name": "Brendis Lorentzen",
-	"job": "Dental Hygienist",
-	"sex": "male",
-	"team": "C",
+	"name": "Alyda Dutteridge",
+	"job": "Graphic Designer",
+	"sex": "female",
 	"user_present": true,
-	"position": 1,
-	color: "black"
+	"position": 3,
+	"team": 'D',
+	"color": "black"
 }, {
 	"key": 12,
-	"name": "Barthel Costelow",
-	"job": "Help Desk Operator",
+	"name": "Seumas Barbey",
+	"job": "Senior Financial Analyst",
+	"sex": "male",
+	"user_present": false,
+	"position": 2,
+	"team": 'C',
+	"color": "black"
+}, {
+	"key": 13,
+	"name": "Morie Burgne",
+	"job": "Nurse",
+	"sex": "male",
+	"user_present": true,
+	"position": 1,
+	"team": 'B',
+	"color": "black"
+}, {
+	"key": 14,
+	"name": "Bria Jostan",
+	"job": "VP Quality Control",
 	"sex": "female",
-	"team": "D",
+	"user_present": true,
+	"position": 3,
+	"team": 'D',
+	"color": "black"
+}, {
+	"key": 15,
+	"name": "Jasun Gibling",
+	"job": "Assistant Manager",
+	"sex": "male",
 	"user_present": true,
 	"position": 0,
-	color: "black"
+	"team": 'A',
+	"color": "black"
+}, {
+	"key": 16,
+	"name": "Sherill Ben-Aharon",
+	"job": "Junior Executive",
+	"sex": "male",
+	"user_present": false,
+	"position": 1,
+	"team": 'B',
+	"color": "black"
+}, {
+	"key": 17,
+	"name": "Whitby Pochon",
+	"job": "Nurse Practicioner",
+	"sex": "male",
+	"user_present": false,
+	"position": 1,
+	"team": 'B',
+	"color": "black"
+}, {
+	"key": 18,
+	"name": "Norrie Ofener",
+	"job": "Cost Accountant",
+	"sex": "female",
+	"user_present": true,
+	"position": 0,
+	"team": 'A',
+	"color": "black"
+}, {
+	"key": 19,
+	"name": "Antoine Noice",
+	"job": "Quality Engineer",
+	"sex": "male",
+	"user_present": true,
+	"position": 3,
+	"team": 'D',
+	"color": "black"
+}, {
+	"key": 20,
+	"name": "Mabelle Lowrey",
+	"job": "Paralegal",
+	"sex": "female",
+	"user_present": false,
+	"position": 0,
+	"team": 'A',
+	"color": "black"
+}, {
+	"key": 21,
+	"name": "Geoffry Davidove",
+	"job": "Design Engineer",
+	"sex": "male",
+	"user_present": true,
+	"position": 2,
+	"team": 'C',
+	"color": "black"
+}, {
+	"key": 22,
+	"name": "Jasmina Farlowe",
+	"job": "Environmental Specialist",
+	"sex": "male",
+	"user_present": true,
+	"position": 3,
+	"team": 'D',
+	"color": "black"
+}, {
+	"key": 23,
+	"name": "Kaela Blondelle",
+	"job": "Structural Engineer",
+	"sex": "female",
+	"user_present": false,
+	"position": 1,
+	"team": 'B',
+	"color": "black"
+}, {
+	"key": 24,
+	"name": "Evelyn Danieli",
+	"job": "Assistant Professor",
+	"sex": "female",
+	"user_present": true,
+	"position": 0,
+	"team": 'A',
+	"color": "black"
 }]
