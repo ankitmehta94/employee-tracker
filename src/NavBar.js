@@ -15,10 +15,10 @@ import { Container, Grid, Input, Dropdown, Button } from 'semantic-ui-react'
 class NavBar extends  Component {
 	constructor(){
 		super();
-		this.state = {totalUsers:[],selectionArray:[{text:'A',value:'A'},{text:'B',value:'B'},{text:'C',value:'C'},{text:'D',value:'D'}],selectionName:[]};
-		this.handleClick = this.handleClick.bind(this);
+		this.state = {totalUsers:[],selectionArray:[{text:'A',value:'A'},{text:'B',value:'B'},{text:'C',value:'C'},{text:'D',value:'D'}],selectionName:[],selectionJob:[]};
 		this.handleTeamChange = this.handleTeamChange.bind(this);
 		this.handleSearchChange = this.handleSearchChange.bind(this);
+		this.handleJobChange = this.handleJobChange.bind(this);
 	}
 	componentDidMount () {
 		const {users} = this.props;
@@ -32,10 +32,14 @@ class NavBar extends  Component {
 		console.log(this.state);
 		console.log(users);
 		let selectionName = [];
+		let selectionJob = [];
 		users.forEach((user)=>{
+			if(user.user_present){
 				selectionName.push({text: user.name,value:user.key});
+				selectionJob.push({text: user.job,value:user.key});
+			}
 		});
-		this.setState({selectionName:selectionName},()=>{
+		this.setState({selectionName:selectionName,selectionJob:selectionJob},()=>{
 			console.log(this.state);
 		});
 	}
@@ -46,8 +50,9 @@ class NavBar extends  Component {
 		this.props.changeColor(this.state.totalUsers, valueArray);
 
 	}
-	handleClick(e){
-		console.log(e);
+	handleJobChange(e,data){
+		let valueArray = data.value;
+		this.props.changeColor(this.state.totalUsers, valueArray);
 	}
 	handleTeamChange(e, data){
 		console.log(e);
@@ -67,11 +72,14 @@ class NavBar extends  Component {
 			<Container>
 				<Grid>
 					<Grid.Row columns={3}>
-						<Grid.Column>
+						<Grid.Column verticalAlign={'middle'} width={6}>
 							<Dropdown placeholder='Employees' search fluid selection options={this.state.selectionName} onChange={this.handleSearchChange} />
 						</Grid.Column>
-						<Grid.Column>
+						<Grid.Column verticalAlign={'middle'} width={3}>
 							<Dropdown placeholder='Teams'  multiple selection options={this.state.selectionArray} onChange={this.handleTeamChange} />
+						</Grid.Column>
+						<Grid.Column verticalAlign={'middle'} width={6}>
+							<Dropdown placeholder='Jobs'  multiple fluid selection options={this.state.selectionJob} onChange={this.handleJobChange} />
 						</Grid.Column>
 
 					</Grid.Row>
