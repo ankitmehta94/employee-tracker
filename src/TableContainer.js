@@ -14,7 +14,7 @@ import Table from './Table.js'
 class TableContainer extends  React.Component {
 	constructor(){
 		super();
-		this.state = {totalUsers:[],admin:false,switchArray:[],notification:''};
+		this.state = {totalUsers:[],admin:false,switchArray:[],notification:null};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleUserClick = this.handleUserClick.bind(this);
 	}
@@ -43,6 +43,9 @@ class TableContainer extends  React.Component {
 			this.setState({switchArray:switchArray});
 		}
 	}
+	componentDidUpdate(){
+		console.log('yes', this.state.notification);
+	}
 	handleChange(e,data){
 		this.setState({admin:data.checked});
 	}
@@ -53,13 +56,15 @@ class TableContainer extends  React.Component {
 		this.setState({tableUsers:x});
 	}
 	showNotification(){
-		if(this.state.admin){
+		if(this.state.admin && this.state.notification){
 			console.log(this.state.admin);
 			return (
 				<Header as='h3' block>
 					{this.state.notification}
 				</Header>
 			)
+		}else{
+			return <div></div>
 		}
 	}
 	render(){
@@ -96,7 +101,7 @@ class TableContainer extends  React.Component {
 					</Grid.Row>
 				</Grid>
 				<Divider/>
-				{this.showNotification}
+				{this.showNotification()}
 			</Container>
 		)
 	}
