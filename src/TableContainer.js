@@ -19,16 +19,20 @@ class TableContainer extends  React.Component {
 	componentWillMount () {
 		console.log(this.props);
 		const { users } =  this.props;
-		//debugger
 		let y = JSON.parse(JSON.stringify(users));
 		let x =  util.splitArray(y,4);
-		//debugger;
 		this.setState({tableUsers:x});
 	}
 	handleChange(e,data){
 		console.log(e)
 		console.log(data);
 		this.setState({admin:data.checked});
+	}
+	componentWillReceiveProps(nextProps){
+		const { users } =  nextProps;
+		let y = JSON.parse(JSON.stringify(users));
+		let x =  util.splitArray(y,4);
+		this.setState({tableUsers:x});
 	}
 	render(){
 		console.log(this);

@@ -6,7 +6,7 @@ class User extends  React.Component {
 
 	constructor(){
 		super();
-		this.state = { user:{user_present:true, sex:'male', name:'Ankit Mehta', job:'Frontend Developer', team:'Frontend' ,position:0},
+		this.state = { user:{user_present:true, sex:'male', name:'Ankit Mehta', job:'Frontend Developer', team:'Frontend' ,position:0, color:"black"},
 			openPop:true
 		};
 		console.log(this);
@@ -15,10 +15,18 @@ class User extends  React.Component {
 		this.setState({user:this.props.value});
 	}
 	showIcon(){
-		return <Icon ref={ico => this.icoElement = ico} name={this.state.user.user_present?this.state.user.sex:'circle outline'} size={'huge'} />
+		return <Icon ref={ico => this.icoElement = ico} name={this.state.user.user_present?this.state.user.sex:'circle outline'} color={this.state.user.color} size={'huge'} />
+	}
+	componentDidUpdate(){
+		//console.log(this.props);
+
+	}
+	componentWillReceiveProps(nextProps){
+	console.log(nextProps);
+	this.setState({user:nextProps.value});
 	}
 	showPopup(){
-
+	if(this.state.user.user_present){
 		return(
 			<Popup position={'top center'} on={['hover','click']} trigger={this.showIcon()}>
 				<Popup.Header>{this.state.user.name}</Popup.Header>
@@ -26,8 +34,12 @@ class User extends  React.Component {
 					{this.state.user.job}
 				</Popup.Content>
 			</Popup>
-
 		)
+	}else{
+		return <Icon  name={'circle outline'} color={'black'} size={'huge'} />
+	}
+
+
 	}
 	render(){
 		//console.log(this.props);

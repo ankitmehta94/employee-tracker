@@ -5,7 +5,8 @@ export default [{
 	"sex": "male",
 	"team": "A",
 	"user_present": true,
-	"position": 0
+	"position": 0,
+	color: "black"
 }, {
 	"key": 2,
 	"name": "Micheline Ravenscroft",
@@ -13,7 +14,8 @@ export default [{
 	"sex": "male",
 	"team": "B",
 	"user_present": false,
-	"position": 2
+	"position": 2,
+	color: "black"
 }, {
 	"key": 3,
 	"name": "Elia MacArthur",
@@ -21,7 +23,8 @@ export default [{
 	"sex": "female",
 	"team": "C",
 	"user_present": true,
-	"position": 1
+	"position": 1,
+	color: "black"
 }, {
 	"key": 4,
 	"name": "Karmen Wellan",
@@ -29,7 +32,8 @@ export default [{
 	"sex": "male",
 	"team": "D",
 	"user_present": false,
-	"position": 3
+	"position": 3,
+	color: "black"
 }, {
 	"key": 5,
 	"name": "Rosella Rouch",
@@ -37,7 +41,8 @@ export default [{
 	"sex": "female",
 	"team": "A",
 	"user_present": false,
-	"position": 2
+	"position": 2,
+	color: "black"
 }, {
 	"key": 6,
 	"name": "Maryanne Asee",
@@ -45,7 +50,8 @@ export default [{
 	"sex": "male",
 	"team": "B",
 	"user_present": true,
-	"position": 0
+	"position": 0,
+	color: "black"
 }, {
 	"key": 7,
 	"name": "Cordell Marris",
@@ -53,7 +59,8 @@ export default [{
 	"sex": "male",
 	"team": "C",
 	"user_present": false,
-	"position": 1
+	"position": 1,
+	color: "black"
 }, {
 	"key": 8,
 	"name": "Theodosia Radcliffe",
@@ -61,7 +68,8 @@ export default [{
 	"sex": "female",
 	"team": "D",
 	"user_present": true,
-	"position": 3
+	"position": 3,
+	color: "black"
 }, {
 	"key": 9,
 	"name": "Suzanna Janicki",
@@ -69,7 +77,8 @@ export default [{
 	"sex": "female",
 	"team": "A",
 	"user_present": true,
-	"position": 2
+	"position": 2,
+	color: "black"
 }, {
 	"key": 10,
 	"name": "Kevon Dawks",
@@ -77,7 +86,8 @@ export default [{
 	"sex": "male",
 	"team": "B",
 	"user_present": false,
-	"position": 1
+	"position": 1,
+	color: "black"
 }, {
 	"key": 11,
 	"name": "Brendis Lorentzen",
@@ -85,7 +95,8 @@ export default [{
 	"sex": "male",
 	"team": "C",
 	"user_present": true,
-	"position": 1
+	"position": 1,
+	color: "black"
 }, {
 	"key": 12,
 	"name": "Barthel Costelow",
@@ -93,5 +104,6 @@ export default [{
 	"sex": "female",
 	"team": "D",
 	"user_present": true,
-	"position": 0
+	"position": 0,
+	color: "black"
 }]
