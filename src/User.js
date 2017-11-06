@@ -9,29 +9,35 @@ class User extends  React.Component {
 		this.state = { user:{user_present:true, sex:'male', name:'Ankit Mehta', job:'Frontend Developer', team:'Frontend' ,position:0, color:"black"},
 			openPop:true
 		};
-		console.log(this);
+		this.handleUserClick = this.handleUserClick.bind(this);
 	}
 	componentDidMount(){
 		this.setState({user:this.props.value});
 	}
 	showIcon(){
-		return <Icon ref={ico => this.icoElement = ico} name={this.state.user.user_present?this.state.user.sex:'circle outline'} color={this.state.user.color} size={'huge'} />
+		return <Icon onClick={this.handleUserClick} ref={ico => this.icoElement = ico} name={this.state.user.user_present?this.state.user.sex:'circle outline'} color={this.state.user.color} size={'huge'} />
 	}
 	componentDidUpdate(){
 		//console.log(this.props);
 
 	}
+	handleUserClick(){
+		let { user } = this.state;
+		user.color = "red";
+		this.setState({"user":user});
+		(this.props.onClick.bind(this,this.state.user))();
+	}
 	componentWillReceiveProps(nextProps){
-	console.log(nextProps);
 	this.setState({user:nextProps.value});
 	}
 	showPopup(){
 	if(this.state.user.user_present){
 		return(
 			<Popup position={'top center'} on={['hover','click']} trigger={this.showIcon()}>
-				<Popup.Header>{this.state.user.name}</Popup.Header>
+				<Popup.Header>{this.state.user.name}---->{this.state.user.team}</Popup.Header>
 				<Popup.Content>
 					{this.state.user.job}
+
 				</Popup.Content>
 			</Popup>
 		)

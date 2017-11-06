@@ -26,11 +26,7 @@ class NavBar extends  Component {
 		// 	user.user_present = user.user_present.toString();
 		// })
 		this.setState({totalUsers:users},()=>{
-			console.log(this.state);
 		});
-		console.log(this.props.users);
-		console.log(this.state);
-		console.log(users);
 		let selectionName = [];
 		let selectionJob = [];
 		users.forEach((user)=>{
@@ -44,8 +40,7 @@ class NavBar extends  Component {
 		});
 	}
 	handleSearchChange(e, data){
-		console.log(e);
-		console.log(data);
+
 		let valueArray = [data.value];
 		this.props.changeColor(this.state.totalUsers, valueArray);
 
@@ -55,15 +50,12 @@ class NavBar extends  Component {
 		this.props.changeColor(this.state.totalUsers, valueArray);
 	}
 	handleTeamChange(e, data){
-		console.log(e);
-		console.log(data);
 		let valueArray = [];
 		this.state.totalUsers.forEach((user)=>{
 			if(data.value.indexOf(user.team)!==-1){
 				valueArray.push(user.key);
 			}
 		})
-		console.log(valueArray);
 		this.props.changeColor(this.state.totalUsers, valueArray);
 	}
 
@@ -91,9 +83,6 @@ class NavBar extends  Component {
 
 
 function mapStateToProps(state,props) {
-	console.log(state);
-	//debugger;
-	console.log(props);
 	return {
 		users:state.users
 	}

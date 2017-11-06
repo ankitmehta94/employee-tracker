@@ -8,14 +8,21 @@ import User from './User.js'
 
 
 class Table extends  React.Component {
+	constructor(){
+		super();
+		this.handleUserClick = this.handleUserClick.bind(this);
+	}
+	handleUserClick(data){
+		(this.props.onClick.bind(this,data))();
+	}
 	createTable(){
 		return (<Grid>
 			<Grid.Row columns={2}>
 				<Grid.Column>
-					<User value={this.props.userList[0]}/>
+					<User value={this.props.userList[0]} onClick={this.handleUserClick} />
 				</Grid.Column>
 				<Grid.Column>
-					<User value={this.props.userList[1]}/>
+					<User value={this.props.userList[1]} onClick={this.handleUserClick}/>
 				</Grid.Column>
 			</Grid.Row>
 			<Grid.Row columns={1}>
@@ -23,16 +30,16 @@ class Table extends  React.Component {
 			</Grid.Row>
 			<Grid.Row columns={2}>
 				<Grid.Column>
-					<User value={this.props.userList[2]}/>
+					<User value={this.props.userList[2]} onClick={this.handleUserClick}/>
 				</Grid.Column>
 				<Grid.Column>
-					<User value={this.props.userList[3]}/>
+					<User value={this.props.userList[3]} onClick={this.handleUserClick}/>
 				</Grid.Column>
 			</Grid.Row>
 		</Grid>)
 	}
 	render(){
-		console.log(this.props);
+		console.log(this);
 		return (
 			<Container>
 				{this.props.userList?this.createTable():''}
