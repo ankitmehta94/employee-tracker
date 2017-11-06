@@ -15,7 +15,7 @@ class User extends  React.Component {
 		this.setState({user:this.props.value});
 	}
 	showIcon(){
-		return <Icon onClick={this.handleUserClick} ref={ico => this.icoElement = ico} name={this.state.user.user_present?this.state.user.sex:'circle outline'} color={this.state.user.color} size={'huge'} />
+		return <Icon onClick={this.handleUserClick} ref={ico => this.icoElement = ico} name={this.state.user.user_present?this.state.user.sex:'circle outline'} color={this.state.user.color} size={'big'} />
 	}
 	componentDidUpdate(){
 		//console.log(this.props);
@@ -44,7 +44,7 @@ class User extends  React.Component {
 			</Popup>
 		)
 	}else{
-		return <Icon  name={'circle outline'} color={'black'} size={'huge'} />
+		return <Icon  name={'circle outline'} color={'black'} size={'big'} />
 	}
 
 

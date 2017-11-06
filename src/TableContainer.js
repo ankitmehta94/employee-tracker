@@ -6,7 +6,7 @@ import {switchEmp} from './actions'
 //console.log(s);
 import util from './util';
 
-import { Container, Grid, Checkbox, Divider } from 'semantic-ui-react'
+import { Container, Grid, Checkbox, Divider, Header } from 'semantic-ui-react'
 
 import Table from './Table.js'
 
@@ -14,7 +14,7 @@ import Table from './Table.js'
 class TableContainer extends  React.Component {
 	constructor(){
 		super();
-		this.state = {totalUsers:[],admin:false,switchArray:[]};
+		this.state = {totalUsers:[],admin:false,switchArray:[],notification:''};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleUserClick = this.handleUserClick.bind(this);
 	}
@@ -28,11 +28,17 @@ class TableContainer extends  React.Component {
 		console.log(data);
 		if(this.state.switchArray.length<3){
 			let switchArray = this.state.switchArray;
-			switchArray.push(data.key);
+			switchArray.push(data);
 			if(switchArray.length===2){
-				this.props.switchEmp(this.props.users, switchArray);
-				console.log(switchArray);
+				let x = switchArray.map((datum)=>{
+					return datum.key;
+				})
+				this.props.switchEmp(this.props.users, x);
+				let noti = switchArray[0].name + ' switched with ' + switchArray[1].name;
+				console.log(noti);
 				switchArray = [];
+				this.setState({notification:noti});
+				console.log(this.state.notification);
 			}
 			this.setState({switchArray:switchArray});
 		}
@@ -45,6 +51,16 @@ class TableContainer extends  React.Component {
 		let y = JSON.parse(JSON.stringify(users));
 		let x =  util.splitArray(y,4);
 		this.setState({tableUsers:x});
+	}
+	showNotification(){
+		if(this.state.admin){
+			console.log(this.state.admin);
+			return (
+				<Header as='h3' block>
+					{this.state.notification}
+				</Header>
+			)
+		}
 	}
 	render(){
 		return (
@@ -79,6 +95,8 @@ class TableContainer extends  React.Component {
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
+				<Divider/>
+				{this.showNotification}
 			</Container>
 		)
 	}
