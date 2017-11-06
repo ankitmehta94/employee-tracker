@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import {fetchusers} from './actions'
+import {fetchUsers} from './actions'
 
 import { Loader, Divider } from 'semantic-ui-react'
 
@@ -10,13 +10,21 @@ import TableContainer from './TableContainer.js'
 import NavBar from './NavBar.js'
 
 class Main extends Component {
-	state = {tableUsers:[],totalUsers:[]};
-	componentWillMount () {
-		console.log('componentWillMount');
+	constructor(){
+		super();
+		this.state = {tableUsers:[],totalUsers:[]};
+		console.log(this);
+	}
+	// state = {tableUsers:[],totalUsers:[]};
+	componentDidMount () {
+		console.log('componentDidMount');
 		this.props.fetchUsers().then(()=>{
 			let totalUsers = this.props.users;
 			this.setState({totalUsers:totalUsers});
 		});
+	}
+	componentDidUpdate(){
+		console.log('componentDidUpdate');
 	}
 	render() {
 		if(this.state.totalUsers.length>0){
@@ -36,13 +44,16 @@ class Main extends Component {
 
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state,props) {
+	console.log(state);
+	//debugger;
+	console.log(props);
 	return {
 		users:state.users
 	}
 }
 function matchDispatchToProps(dispatch) {
-	return bindActionCreators({fetchUsers:fetchusers}, dispatch);
+	return bindActionCreators({fetchUsers:fetchUsers}, dispatch);
 }
 
 export default connect(mapStateToProps,matchDispatchToProps)(Main)

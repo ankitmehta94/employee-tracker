@@ -11,7 +11,8 @@ function dbCall(){
 	return Promise.resolve(UserList);
 }
 
-export function fetchusers() {
+export function fetchUsers() {
+	console.log('fetchUsers');
 	return dispatch => {
 		return dbCall().then(res => {
 			dispatch(usersReceived(res));

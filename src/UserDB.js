@@ -3,7 +3,7 @@ export default [{
 	"name": "Bobbie Senton",
 	"job": "Help Desk Operator",
 	"sex": "male",
-	"team": "Dolan's Cadillac",
+	"team": "A",
 	"user_present": true,
 	"position": 0
 }, {
@@ -11,7 +11,7 @@ export default [{
 	"name": "Micheline Ravenscroft",
 	"job": "Information Systems Manager",
 	"sex": "male",
-	"team": "Fearless",
+	"team": "B",
 	"user_present": false,
 	"position": 2
 }, {
@@ -19,7 +19,7 @@ export default [{
 	"name": "Elia MacArthur",
 	"job": "Legal Assistant",
 	"sex": "female",
-	"team": "Grass",
+	"team": "C",
 	"user_present": true,
 	"position": 1
 }, {
@@ -27,7 +27,7 @@ export default [{
 	"name": "Karmen Wellan",
 	"job": "Cost Accountant",
 	"sex": "male",
-	"team": "Hanzo the Razor: Sword of Justice (Goyôkiba)",
+	"team": "D",
 	"user_present": false,
 	"position": 3
 }, {
@@ -35,7 +35,7 @@ export default [{
 	"name": "Rosella Rouch",
 	"job": "Computer Systems Analyst I",
 	"sex": "female",
-	"team": "Maborosi (Maboroshi no hikari)",
+	"team": "A",
 	"user_present": false,
 	"position": 2
 }, {
@@ -43,7 +43,7 @@ export default [{
 	"name": "Maryanne Asee",
 	"job": "Human Resources Manager",
 	"sex": "male",
-	"team": "One of Our Dinosaurs Is Missing",
+	"team": "B",
 	"user_present": true,
 	"position": 0
 }, {
@@ -51,7 +51,7 @@ export default [{
 	"name": "Cordell Marris",
 	"job": "Physical Therapy Assistant",
 	"sex": "male",
-	"team": "Burning Bright",
+	"team": "C",
 	"user_present": false,
 	"position": 1
 }, {
@@ -59,7 +59,7 @@ export default [{
 	"name": "Theodosia Radcliffe",
 	"job": "Graphic Designer",
 	"sex": "female",
-	"team": "Kid, The",
+	"team": "D",
 	"user_present": true,
 	"position": 3
 }, {
@@ -67,7 +67,7 @@ export default [{
 	"name": "Suzanna Janicki",
 	"job": "Teacher",
 	"sex": "female",
-	"team": "Olsen Gang, The (Olsen-Banden)",
+	"team": "A",
 	"user_present": true,
 	"position": 2
 }, {
@@ -75,7 +75,7 @@ export default [{
 	"name": "Kevon Dawks",
 	"job": "Data Coordiator",
 	"sex": "male",
-	"team": "French Fried Vacation 3 (Les bronzés 3: amis pour la vie)",
+	"team": "B",
 	"user_present": false,
 	"position": 1
 }, {
@@ -83,7 +83,7 @@ export default [{
 	"name": "Brendis Lorentzen",
 	"job": "Dental Hygienist",
 	"sex": "male",
-	"team": "The Case of the Scorpion's Tail",
+	"team": "C",
 	"user_present": true,
 	"position": 1
 }, {
@@ -91,7 +91,7 @@ export default [{
 	"name": "Barthel Costelow",
 	"job": "Help Desk Operator",
 	"sex": "female",
-	"team": "Snowballs",
+	"team": "D",
 	"user_present": true,
 	"position": 0
 }]

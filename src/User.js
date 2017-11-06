@@ -1,23 +1,16 @@
 import React from 'react'
-import {connect} from 'react-redux';
-import { Icon, Label, Popup } from 'semantic-ui-react'
-import classnames from 'classnames'
+import { Icon, Popup } from 'semantic-ui-react'
 import './index.css';
 //console.log(s);
 class User extends  React.Component {
-	state = { user:{user_present:true, sex:'male', name:'Ankit Mehta', job:'Frontend Developer', team:'Frontend' ,position:0},
-		openPop:true
-    };
-	positionToClassName(p) {
-		switch (p){
-			case 0:{
-				return 'firstUser'
-			}
-			case 1:{
-				return 'secondUser'
-			}
-		}
-		}
+
+	constructor(){
+		super();
+		this.state = { user:{user_present:true, sex:'male', name:'Ankit Mehta', job:'Frontend Developer', team:'Frontend' ,position:0},
+			openPop:true
+		};
+		console.log(this);
+	}
 	componentDidMount(){
 		this.setState({user:this.props.value});
 	}
