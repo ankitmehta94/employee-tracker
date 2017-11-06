@@ -19,10 +19,10 @@ class Table extends  React.Component {
 		return (<Grid>
 			<Grid.Row columns={2}>
 				<Grid.Column>
-					<User value={this.props.userList[0]} onClick={this.handleUserClick} />
+					<User value={this.props.userList[0]} admin={this.props.admin} onClick={this.handleUserClick} />
 				</Grid.Column>
 				<Grid.Column>
-					<User value={this.props.userList[1]} onClick={this.handleUserClick}/>
+					<User value={this.props.userList[1]} admin={this.props.admin} onClick={this.handleUserClick}/>
 				</Grid.Column>
 			</Grid.Row>
 			<Grid.Row columns={1}>
@@ -30,10 +30,10 @@ class Table extends  React.Component {
 			</Grid.Row>
 			<Grid.Row columns={2}>
 				<Grid.Column>
-					<User value={this.props.userList[2]} onClick={this.handleUserClick}/>
+					<User value={this.props.userList[2]} admin={this.props.admin} onClick={this.handleUserClick}/>
 				</Grid.Column>
 				<Grid.Column>
-					<User value={this.props.userList[3]} onClick={this.handleUserClick}/>
+					<User value={this.props.userList[3]} admin={this.props.admin} onClick={this.handleUserClick}/>
 				</Grid.Column>
 			</Grid.Row>
 		</Grid>)

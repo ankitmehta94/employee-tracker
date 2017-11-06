@@ -22,10 +22,12 @@ class User extends  React.Component {
 
 	}
 	handleUserClick(){
-		let { user } = this.state;
-		user.color = "red";
-		this.setState({"user":user});
-		(this.props.onClick.bind(this,this.state.user))();
+		if(this.props.admin) {
+			let {user} = this.state;
+			user.color = "red";
+			this.setState({"user": user});
+			(this.props.onClick.bind(this, this.state.user))();
+		}
 	}
 	componentWillReceiveProps(nextProps){
 	this.setState({user:nextProps.value});

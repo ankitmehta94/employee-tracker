@@ -52,7 +52,7 @@ class TableContainer extends  React.Component {
 				<Grid>
 					<Grid.Row columns={1}>
 						<Grid.Column>
-							<Checkbox label={'Switch On Admin Mode'} onChange={this.handleChange} toggle />
+							<Checkbox label={'Switch On Project Manager Mode (Select Two Employess and they will switch places)'} onChange={this.handleChange} toggle />
 						</Grid.Column>
 					</Grid.Row>
 					<Grid.Row columns={3}>
